@@ -1,0 +1,116 @@
+/*
+
+
+######################################################
+#  -------                                           #
+# |       \            |     |          |  |         #
+# |       /            |     |          |  |         #
+# |-------   \ _ /     |-----|  / _ \   |  |  \ _ /  #
+# |       \   \ /      |     | | (_) |  |  |   \ /   #
+# |       /    /       |     |  \___/   |  |    /    #
+#  -------    /                                /     #
+###################################################### 
+
+
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(pic.jpg) no-repeat;
+    background-size: all;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.inner-container{
+    width: 55%;
+    float: center;
+    background-color: #fdfdfd;
+    padding: 200px;
+    border-radius: 10;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.text{
+    font-size: 15px;
+    color: #545454;
+    line-height: 20px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:2000px){
+    .inner-container{
+        padding: 87px;
+        cursor: default;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width:2000px){
+    .about-section{
+        background-size: 10%;
+        padding: 75px 20px;
+    }
+    .inner-container{
+        width: 92%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 50;
+        border-radius: 5;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+a       
+{
+    display: grid;
+    height: 50px;
+    width: 100px;
+    background: linear-gradient(
+        #6b6b6b,
+        #383838
+    );
+    position: absolute;
+    right: 0;
+    top: 1;
+    color: #fff;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 3px;
+    border-radius: 5px;
+}

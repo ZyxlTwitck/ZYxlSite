@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEB --- [Zyxl]</title>
+		<link rel="stylesheet" href="css.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	</head>
+	<body>
+
+		 <nav>
+      <div class="logo">Menu</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="Home(index).html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="https://t.me/ZyxalContactServices">Contact</a></li>
+        <li><a href="index1.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <div class="content">
+      <div>By Zyxl</div>
+    </div>
+
+	<div class="action">
+		<div class="profile" onclick="menuToggle();">
+			<img src="phonkicon.jpg" alt="">
+		</div>
+
+	<div class="menu">
+		<h3>
+			Zyxl Account
+			<div>
+				Zyxl Team
+			</div>
+		</h3>
+		<ul>
+			<li>
+				<span class="material-icons icons-size">person</span>
+				<a href="#">My Profile</a>
+			</li>
+			<li>
+				<span class="material-icons icons-size">mode</span>
+				<a href="#">Edit Account</a>
+			</li>
+			<li>
+				<span class="material-icons icons-size">insert_comment</span>
+				<a href="#">Comments</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="register-box">
+	<h1>Register now to get started!</h1>
+
+	<div class="usernamebox">
+		<i class="fas fa-user"></i>
+		<input type="username" placeholder="Username">
+	</div>
+
+	<form id="form" action="#">
+	<div class="emailbox">
+		<i class="fas fa-lock"></i>
+		<input type="email" id="email1" placeholder="E-mail" onkeydown="validation()">
+		<snap id="email"></snap>
+	</div>
+</form>
+
+	<div class="passwordbox">
+		<i class="fas fa-key"></i>
+		<input type="password" placeholder="Password">
+	</div>
+
+	<div class="passwordbox">
+		<i class="fas fa-key"></i>
+		<input type="password" placeholder="Repeat password">
+	</div>
+	<input type="button" class="btn" onclick="location.href='index1.html'" value="Continue!">
+</div> 
+
+	<script type="text/javascript">
+		function validation()
+		{
+			var form = document.getElementById("form");
+			var email1 = document.getElementById("email1").value;
+			var email = document.getElementById("email");
+			var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,4}$/;
+
+
+			if (email1.match(pattern))
+			{
+				form.classList.add("valid");
+				form.classList.remove("invalid");
+				email.innerHTML = "Your Email Address in Valid.";
+				email.style.color = "#00ff00";
+			}
+			else
+			{
+				form.classList.remove("valid");
+				form.classList.add("invalid");
+				email.innerHTML = "Please Enter Valid Email Address";
+				email.style.color = "#ff0000";
+			}
+
+			if (email1 == "")
+			{
+				form.classList.remove("valid");
+				form.classList.remove("invalid");
+				email.innerHTML = "";
+				email.style.color = "#00ff00";
+			}			
+		}
+	</script>
+
+<script>
+	function menuToggle(){
+		const toggleMenu = document.querySelector('.menu');
+		toggleMenu.classList.toggle('active')
+	}
+</script>
+
+	</body>
+</html>
